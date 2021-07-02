@@ -1,0 +1,62 @@
+/*This is a CSS comment*/
+
+html {
+    /* background-color: burlywood; */
+    font-family: sans-serif;
+}
+
+h1 {
+    color: purple;
+    font-family: cursive;
+}
+
+/*body {
+    background-color: pink;
+} */
+
+.box {
+    width: 200px;
+    height: 200px;
+    border-color: black;
+    border-width: 5px;
+    border-style: solid;
+    display: inline-block;
+    /* display: none;
+    visibility: hidden; */
+}
+
+.red-box {
+    background-color: red;
+}
+
+.yellow-box {
+    background-color: yellow;
+}
+
+.green-box {
+    background-color: green;
+}
+
+.red-box-see-through {
+    background-color: rgba(255,0,0,0.5)
+}
+
+.yellow-box-see-through {
+    background-color: rgba(255,255,0,0.5)
+}
+
+.green-box-see-through {
+    background-color: rgba(0,255,0,0.5)
+}
+
+.center-align-text {
+    text-align: center;
+}
+
+.right-align-text {
+    text-align: right;
+}
+
+.left-align-text {
+    text-align: left;
+}
