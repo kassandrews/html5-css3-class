@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>jQuery Accordion</title>
+        <style>
+            .container {
+                max-width: 500px;
+                margin: auto;
+            }
+            .remainder-text {
+                display: none;
+            }
+            button {
+                background: transparent;
+                border: none;
+            }
+            button:hover {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>jQuery Accordion</h1>
+        <div class="container">
+            <p class="intro">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas ultricies mi eget mauris pharetra et. Et tortor consequat id porta nibh venenatis. Turpis egestas pretium aenean pharetra. Purus non enim praesent elementum facilisis. Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare. Faucibus pulvinar elementum integer enim neque volutpat ac tincidunt. Convallis aenean et tortor at risus viverra adipiscing. Sociis natoque penatibus et magnis. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Cursus in hac habitasse platea dictumst quisque. Hendrerit dolor magna eget est. Vehicula ipsum a arcu cursus vitae congue. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. At augue eget arcu dictum varius. Volutpat ac tincidunt vitae semper quis lectus nulla. Nunc sed id semper risus in hendrerit gravida. Egestas quis ipsum suspendisse ultrices.
+            </p>
+            <p class="remainder-text">
+                Nibh cras pulvinar mattis nunc sed blandit libero volutpat. Id nibh tortor id aliquet. Curabitur gravida arcu ac tortor dignissim convallis aenean et. Leo a diam sollicitudin tempor id eu nisl. Congue nisi vitae suscipit tellus mauris a diam maecenas sed. Euismod nisi porta lorem mollis aliquam. Turpis massa tincidunt dui ut. Vehicula ipsum a arcu cursus vitae congue mauris rhoncus. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at. Eu lobortis elementum nibh tellus molestie nunc non. Ipsum suspendisse ultrices gravida dictum fusce. Sed viverra tellus in hac habitasse platea dictumst vestibulum. Duis ut diam quam nulla porttitor massa id neque. Tellus mauris a diam maecenas sed enim. Molestie at elementum eu facilisis sed odio morbi quis. Lectus quam id leo in vitae turpis. Suspendisse interdum consectetur libero id faucibus nisl tincidunt eget nullam. Commodo ullamcorper a lacus vestibulum sed arcu non odio.
+            </p>
+            <button type="button" class="toggle-button">Show More</button>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+            <script>
+                $(document).ready(function() {
+                  $('.toggle-button').on('click', function(){
+                    const buttonText = $(this).text().toLowerCase();
+            
+                    $(this).prev('.remainder-text').slideToggle();
+                    $(this).text(buttonText === 'show more' ? 'show less' : 'show more');
+                  });
+                });
+              </script>
+    </body>
+</html>
