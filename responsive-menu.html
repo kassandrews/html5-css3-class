@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Responsive Navigation Bar</title>
+<link rel="stylesheet" href="./assets/css/responsive-menu.css"/>
+</head>
+<body>
+
+<nav class="nav-container">
+    <div class="logo">
+        <a href="https://extension.berkeley.edu/"><img src="./assets/images/berkeley-extension-logo.png" alt="berkeley-extension-logo"></a>
+    </div>
+<div class="navbar">
+
+<div class="icon-bar" onclick="Show()">
+    <i></i>
+    <i></i>
+    <i></i>
+</div>
+
+<ul id="nav-lists">
+    <li class="close"><span onclick="Hide()">×</span></li>
+    <li><a href="#">Home</a></li>
+    <li>
+        <div class="dropdown">
+            <a href="#" class="drop-button">Decades
+                <i class="fa fa-caret-down"></i>
+            </a>
+            <div class="dropdown-content">
+                <a href="./1891-to-1910.html">1891 to 1910</a>
+                <a href="./1911-to-1930.html">1911 to 1930</a>
+                <a href="./1931-to-1950.html">1931 to 1950</a>
+                <a href="./1951-to-1970.html">1951 to 1970</a>
+                <a href="./1971-to-1990.html">1971 to 1990</a>
+                <a href="./1991-to-2010.html">1991 to 2010</a>
+                <a href="./2011-to-2020.html">2011 to 2020</a>
+            </div>
+        </div>
+    </li>
+    <li><a href="#">2021</a></li>
+</ul>
+
+</div>
+</nav>
+
+<script>
+    var navList = document.getElementById("nav-lists");
+    function Show() {
+    navList.classList.add("_Menus-show");
+    }
+    
+    function Hide(){
+    navList.classList.remove("_Menus-show");
+    }
+</script>
+</body>
+</html>
