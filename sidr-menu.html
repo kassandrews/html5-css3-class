@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, minimum-scale=1" />
+        <title>SIDR Menu</title>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.sidr/2.2.1/stylesheets/jquery.sidr.light.min.css">
+    </head>
+    <body>
+        <a id="simple-menu" href="#sidr">Toggle menu</a>
+
+        <div id="sidr">
+        <!-- Your content -->
+        <ul>
+            <li><a href="#">List 1</a></li>
+            <li class="active"><a href="#">List 2</a></li>
+            <li><a href="#">List 3</a></li>
+            <li id="closeMenu">X</li>
+        </ul>
+        </div>
+
+        <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
+        <script src="//cdn.jsdelivr.net/jquery.sidr/2.2.1/jquery.sidr.min.js"></script>
+        <script>
+        $(document).ready(function () {
+            $('#simple-menu').sidr({
+                side: 'right',
+            });
+            $('#closeMenu').on('click', function() {
+               $.sidr('close', 'sidr');
+            });
+        });
+        </script>
+    </body>
+</html>

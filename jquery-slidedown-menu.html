@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, minimum-scale=1" />
+        <title>jQuery Slidedown Menu</title>
+        <style>
+            header {
+                width: 100%;
+                height: auto;
+                background: lightgray;
+            }
+
+            .main-menu {
+                position: relative;
+            }
+
+            #main-navigation {
+                position: absolute;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="main-menu">
+                <button id="menuToggle">Menu Icon</button>
+                <nav id="main-navigation">
+                    <ul>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </nav>
+                </button>
+            </div>
+        </header>
+        <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('#menuToggle').on('click', function() {
+                    var mainNav = $('#main-navigation');
+                    if(mainNav.hasClass('active')) {
+                        mainNav.slideUp().removeClass('active');
+                    } else {
+                        mainNav.slideDown().addClass('active');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
