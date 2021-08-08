@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1"/>
+        <title>Homepage</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap-grid.min.css" integrity="sha512-cKoGpmS4czjv58PNt1YTHxg0wUDlctZyp9KUxQpdbAft+XqnyKvDvcGX0QYCgCohQenOuyGSl8l1f7/+axAqyg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./assets/css/project-menu.css"/>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="header-logo">
+                        <a href="https://extension.berkeley.edu/" target="_blank">
+                            <img class="berkeley-logo" src="./assets/images/berkeley-extension-logo.png" alt="UCBE Logo"/>
+                        </a>
+                    </div>
+                    <div class="mobile-navigation">
+                        <button id="menuToggle">≡</button>
+                            <nav class="top-navigation" id="mobile-navigation">
+                                <a href="./index.html">Home</a>
+                                <a href="#">Decades</a>
+                                <ul>
+                                    <li><a href="./1891-to-1910.html">1891 to 1910</a></li>
+                                    <li><a href="./1911-to-1930.html">1911 to 1930</a></li>
+                                    <li><a href="./1931-to-1950.html">1931 to 1950</a></li>
+                                    <li><a href="./1951-to-1970.html">1951 to 1970</a></li>
+                                    <li><a href="./1971-to-1990.html">1971 to 1990</a></li>
+                                    <li><a href="./1991-to-2010.html">1991 to 2010</a></li>
+                                    <li><a href="./2011-to-2020.html">2011 to 2020</a></li>
+                                </ul>
+                                <a href="./2021.html">2021</a>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <script   src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="   crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function() {
+                $('#menuToggle').on('click', function() {
+                    var mainNav = $('#mobile-navigation');
+                    if(mainNav.hasClass('active')) {
+                        mainNav.slideUp().removeClass('active');
+                    } else {
+                        mainNav.slideDown().addClass('active');
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
